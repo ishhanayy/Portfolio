@@ -30,8 +30,7 @@
     flex-wrap: nowrap;
 }
 
-.navigation
-{
+.navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -41,13 +40,11 @@
     padding: 16px 24px 16px 20px;
 }
 
-.container1first
-{
+.container1first {
     float: left;
 }
 
-.container1second
-{
+.container1second {
     right: 0;
     margin-left: 200px;
     position: absolute;
@@ -55,8 +52,7 @@
     width: auto;
 }
 
-.Name
-{
+.Name {
     background-color: rgb(10, 25, 49);
     font-size: x-large;
     font-family: 'Wicked Mouse Font', sans-serif;
@@ -65,6 +61,24 @@
     color: rgb(255, 201, 71);
     text-align: center;
     cursor: pointer;
+}
+
+@keyframes Name {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Name:hover {
+    animation: Name 1s ease-in-out;
 }
 
 .profile-bubble {
@@ -81,7 +95,7 @@
     border-radius: 12px;
 }
 
-.profile-bubble::before{
+.profile-bubble::before {
     content: '';
     position: absolute;
     right: 50%;
@@ -94,51 +108,81 @@
     border-bottom: 9px solid transparent;
 }
 
-  
-  .Name:hover + .profile-bubble {
+
+.Name:hover+.profile-bubble {
     display: block;
 }
 
-.profile-bubble:hover
-{
+.profile-bubble:hover {
     display: block;
 }
 
-.profile-bubble ul li
-{
+.profile-bubble ul li {
     margin: 3.5px;
     margin-left: 5px;
 }
 
-.profile-list
-{
+.profile-list {
     list-style: none;
     display: flex;
 }
 
-.profile-list li img
-{
+.profile-list li img {
     height: 19px;
 }
 
-.navbar
-{
+/* @keyframes profile-bubble {
+    0% {
+        transform: scale(1);
+        margin: 5px;
+        padding: 5px;
+        display: none;
+        width: 105px;
+        height: 30px;
+        top: 85px;
+        left: 3%;
+        background-color: white;
+        opacity: 0.7;
+        position: absolute;
+        border-radius: 12px;
+    }
+
+    100% {
+        transform: scale(3);
+        background-color: rgb(146, 146, 146);
+        margin: 5px;
+        padding: 5px;
+        display: none;
+        width: 130px;
+        height: 40px;
+        top: 85px;
+        left: 3%;
+        opacity: 0.7;
+        position: absolute;
+        border-radius: 12px;
+    }
+} */
+
+.navbar {
     display: flex;
     margin-top: 15px;
 }
 
-.navHover
-{
+.navHover {
     margin: 20px;
 }
 
-.navHover a
-{
+.navHover a {
     font-size: 20px;
     margin: 10px;
     cursor: pointer;
     text-decoration: none;
     color: rgb(186, 167, 147);
+}
+
+.navHover a:hover
+{
+    color: white;
 }
 
 .container2 {
@@ -154,27 +198,36 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .subone {
     width: 80%;
     background-color: rgb(10, 25, 49);
     padding: 40px;
-    padding-left: 60px;
+    padding-left: 200px;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
 
 .introduction {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 0; 
-    margin-top: 20px; 
+    margin-right: 20px;
+    margin-top: 20px;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
 .intro {
-    margin-top: 0; 
+    margin-top: 0;
     justify-content: center;
     color: rgb(255, 255, 255);
     font-weight: bolder;
@@ -201,36 +254,36 @@
 }
 
 .buttons button:hover {
-    color: rgba(118, 105, 91, 0.47);
+    color: rgb(5, 5, 40);
     background-color: rgb(236, 236, 236);
 }
 
 .pic {
     margin-left: 35px;
-    width: 50%; 
-    text-align: center; 
-    margin-top: 20px; 
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .pic img {
     max-width: 100%;
-    height: auto; 
-    border: 2px solid #ffffff; 
+    height: auto;
+    border: 2px solid #ffffff;
     border-bottom-right-radius: 25px;
 }
 
-.container2two
-{
+.container2two {
     padding-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .more_intro {
-    display:flex;
+    display: flex;
     flex-direction: row;
     /* flex-wrap: nowrap; */
     justify-content: center;
@@ -269,8 +322,7 @@
     width: auto;
 }
 
-.elobaration
-{
+.elobaration {
     width: 650px;
     height: 270px;
 }
@@ -289,21 +341,18 @@
     border-radius: 20px;
 }
 
-.heading
-{
+.heading {
     font-size: 30px;
     padding-bottom: 5px;
 }
 
-.info-me-1 ul li
-{
+.info-me-1 ul li {
     padding: 2px;
     list-style: none;
     color: white;
 }
 
-.info-me-1 ul li a
-{
+.info-me-1 ul li a {
     text-decoration: none;
     color: white;
 }
@@ -315,21 +364,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .skills {
     width: 80%;
     background-color: rgb(10, 25, 49);
     padding: 40px;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
+    /* Include padding in width */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .List {
-    width: 100%; /* Adjusted width for responsiveness */
-    max-width: 900px; /* Set a maximum width */
+    width: 100%;
+    /* Adjusted width for responsiveness */
+    max-width: 900px;
+    /* Set a maximum width */
     height: auto;
     background-color: rgb(24, 90, 219);
     opacity: 0.6;
@@ -339,7 +392,8 @@
     margin-top: 20px;
     box-sizing: border-box;
     padding: 30px 20px;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
+    /* Include padding in width */
 }
 
 .List ul li {
@@ -369,22 +423,28 @@
     max-width: 100%;
     height: auto;
     opacity: 0.8;
-    margin-top: 20px; /* Adjusted margin for responsiveness */
+    margin-top: 20px;
+    /* Adjusted margin for responsiveness */
 }
 
 @media (min-width: 768px) {
     .skills {
-        flex-direction: row; /* Change to row layout on larger screens */
-        justify-content: space-between; /* Add space between content and image */
-        align-items: flex-start; /* Align content to the top */
+        flex-direction: row;
+        /* Change to row layout on larger screens */
+        justify-content: space-between;
+        /* Add space between content and image */
+        align-items: flex-start;
+        /* Align content to the top */
     }
 
     .List {
-        margin-right: 20px; /* Add margin to separate List and image */
+        margin-right: 20px;
+        /* Add margin to separate List and image */
     }
 
     .pic {
-        width: 40%; /* Adjusted width for responsiveness */
+        width: 40%;
+        /* Adjusted width for responsiveness */
         text-align: center;
         margin-top: 20px;
     }
@@ -397,6 +457,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .projectBox {
@@ -408,7 +469,8 @@
 
 .heading-1 {
     font-size: 40px;
-    padding-bottom: 20px; /* Adjust spacing for responsiveness */
+    padding-bottom: 20px;
+    /* Adjust spacing for responsiveness */
     background-color: rgb(10, 25, 49);
     color: white;
     text-align: center;
@@ -417,18 +479,24 @@
 .projects {
     padding-top: 30px;
     display: flex;
-    flex-wrap: wrap; /* Allow projects to wrap to the next line */
+    flex-wrap: wrap;
+    /* Allow projects to wrap to the next line */
     justify-content: center;
-    align-items: flex-start; /* Align projects to the top */
+    align-items: flex-start;
+    /* Align projects to the top */
     background-color: rgb(10, 25, 49);
     padding-bottom: 60px;
 }
 
 .project {
-    width: 100%; /* Full width on small screens, adjust as needed */
-    max-width: 400px; /* Adjust the maximum width for larger screens */
-    margin: 0 10px 20px; /* Add spacing between projects */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 100%;
+    /* Full width on small screens, adjust as needed */
+    max-width: 400px;
+    /* Adjust the maximum width for larger screens */
+    margin: 0 10px 20px;
+    /* Add spacing between projects */
+    box-sizing: border-box;
+    /* Include padding and border in width */
 }
 
 .project a img {
@@ -439,7 +507,8 @@
 }
 
 .project h6 {
-    margin: 10px 0; /* Adjust spacing */
+    margin: 10px 0;
+    /* Adjust spacing */
     color: white;
     text-align: center;
     font-size: larger;
@@ -462,7 +531,7 @@
     text-align: center;
     color: rgb(59, 59, 59);
     background-color: rgb(166, 166, 166);
-    border : 2px solid gray;
+    border: 2px solid gray;
     margin-top: 20px;
     opacity: 0.5;
 }
@@ -484,17 +553,21 @@
     width: 100%;
     background-color: rgb(10, 25, 49);
     display: flex;
-    justify-content: center; /* Center content horizontally */
+    justify-content: center;
+    padding-bottom: 50px;
+    /* Center content horizontally */
 }
 
 .contacts {
     width: 80%;
-    padding: 40px; /* Adjust padding for responsiveness */
+    padding: 40px;
+    /* Adjust padding for responsiveness */
 }
 
 .contacts h1 {
     color: rgb(255, 255, 255);
-    text-align: center; /* Center the heading text */
+    text-align: center;
+    /* Center the heading text */
 }
 
 .contacts form div {
@@ -504,10 +577,12 @@
 
 .contacts form div input {
     margin-top: 5px;
-    width: 100%; /* Make the input fields full width */
+    width: 100%;
+    /* Make the input fields full width */
     height: 30px;
     border-radius: 10px;
-    box-sizing: border-box; /* Include padding and border in width */
+    box-sizing: border-box;
+    /* Include padding and border in width */
 }
 
 .contacts form div button {
@@ -516,19 +591,28 @@
     border: none;
     border-radius: 20px;
     padding: 10px;
-    margin: 15px auto; /* Center the button horizontally */
+    margin: 15px auto;
+    /* Center the button horizontally */
     cursor: pointer;
-    width: 100%; /* Make the button full width */
+    width: 100%;
+    /* Make the button full width */
+}
+
+.contacts form div button:hover {
+    color: rgb(5, 5, 40);
+    background-color: rgb(236, 236, 236);
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
     .contacts {
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 20px;
+        /* Adjust padding for smaller screens */
     }
 
     .contacts form div button {
-        width: 100%; /* Make the button full width on small screens */
+        width: 100%;
+        /* Make the button full width on small screens */
     }
 }
 
@@ -536,29 +620,29 @@
 
 /* Media query for screens with a maximum width of 800px */
 @media screen and (max-width: 800px) {
+
     /* Hide the navigation links and display the three dot icon */
     .navbar .navHover {
-      display: none;
+        display: none;
     }
-  
+
     .navbar .navHover:first-child {
-      display: block;
+        display: block;
     }
-  
+
     /* Adjust the size of the info-me box */
     .info-me {
-      padding: 10px;
-      font-size: 14px;
+        padding: 10px;
+        font-size: 14px;
     }
-  
+
     /* Make the skills box full width and move the image below */
     .skills .List {
-      width: 100%;
-      margin-right: 0;
+        width: 100%;
+        margin-right: 0;
     }
-  
+
     .vectorImage {
-      margin-top: 20px; /* Adjust the margin as needed */
+        /* Adjust the margin as needed */
     }
-  }
-  
+}
